@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import { withUt } from "uploadthing/tw";
 
 const config: Config = {
     darkMode: ["class"],
@@ -34,10 +35,10 @@ const config: Config = {
   				foreground: 'hsl(var(--primary-foreground))',
 				dark: '#451C49',
 			    light: '#311834',
-                // 100: '#481349',
-                // 200: '#5E2C5F',
-				// 300: '#5C3B58',
-				// 400: '#E5D7F1'
+                100: '#481349',
+                200: '#5E2C5F',
+				300: '#5C3B58',
+				400: '#E5D7F1'
 			},
   			secondary: {
   				DEFAULT: 'hsl(var(--secondary))',
@@ -70,4 +71,4 @@ const config: Config = {
   },
   plugins: [require("tailwindcss-animate")],
 };
-export default config;
+export default withUt(config);

@@ -3,17 +3,17 @@ import { createElement, ReactNode } from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 
 const typographyVariants = cva(
-	"scroll-m-20 tracking-tight", // base styles
+	"tracking-tight", // base styles
 	{
 		variants: {
 			variant: {
-				h1: "text-4xl font-extrabold lg:text-5xl",
-				h2: "text-3xl font-bold lg:text-4xl",
-				h3: "text-2xl font-semibold lg:text-3xl",
-				h4: "text-xl font-medium lg:text-2xl",
-				h5: "text-lg font-normal lg:text-xl",
-				h6: "text-base font-normal lg:text-lg",
-				p: "text-sm font-normal lg:text-base leading-relaxed",
+				h1: "scroll-m-20 text-4xl font-extra-bold lg:text-5xl",
+				h2: "scroll-m-16 text-3xl font-bold lg:text-4xl",
+				h3: "scroll-m-12 text-2xl font-semi-bold lg:text-3xl",
+				h4: "scroll-m-10 text-xl font-medium lg:text-2xl",
+				h5: "scroll-m-8 text-lg font-normal lg:text-xl",
+				h6: "scroll-m-6 text-base font-normal lg:text-xl",
+				p: "scroll-m-4 text-sm font-normal lg:text-base",
 				blockquote:
 					"text-lg font-medium italic border-l-4 border-gray-300 pl-6 text-gray-700",
 				lead: "text-xl font-normal leading-7 text-gray-600",

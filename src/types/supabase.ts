@@ -48,6 +48,53 @@ export type Database = {
         }
         Relationships: []
       }
+      workspaces: {
+        Row: {
+          channels: string[] | null
+          created_at: string
+          id: string
+          image_url: string | null
+          invite_code: string | null
+          members: string[] | null
+          name: string
+          regulators: string[] | null
+          slug: string
+          super_admin: string
+        }
+        Insert: {
+          channels?: string[] | null
+          created_at?: string
+          id?: string
+          image_url?: string | null
+          invite_code?: string | null
+          members?: string[] | null
+          name: string
+          regulators?: string[] | null
+          slug: string
+          super_admin?: string
+        }
+        Update: {
+          channels?: string[] | null
+          created_at?: string
+          id?: string
+          image_url?: string | null
+          invite_code?: string | null
+          members?: string[] | null
+          name?: string
+          regulators?: string[] | null
+          slug?: string
+          super_admin?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "workspaces_super_admin_fkey"
+            columns: ["super_admin"]
+            isOneToOne: false
+            referencedRelation: "users"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
     }
     Views: {
       [_ in never]: never
